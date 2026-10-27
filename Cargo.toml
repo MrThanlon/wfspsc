@@ -1,0 +1,21 @@
+[package]
+name = "wfspsc"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[[bench]]
+name = "pmu_bench"
+harness = false
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+
+[profile.bench]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+
